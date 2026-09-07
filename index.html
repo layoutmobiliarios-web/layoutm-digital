@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090909">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Tarjeta digital de Luis Miranda Alhuay, Coordinador de Proyectos en LAYOUTM.">
+  <title>Luis Miranda Alhuay | LAYOUTM</title>
+  <style>
+    :root { --bg:#090909; --panel:#101010; --text:#f5f5f3; --muted:#9a9a96; --line:#30302e; --hover:#191919; }
+    * { box-sizing:border-box; }
+    html { background:var(--bg); }
+    body { margin:0; min-height:100svh; background:var(--bg); color:var(--text); font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+    main { min-height:100svh; display:grid; place-items:center; padding:max(28px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left)); }
+    .card { width:min(100%,430px); }
+    .mark { display:flex; align-items:center; justify-content:center; gap:.34em; font-size:clamp(3.4rem,18vw,5rem); line-height:1; font-weight:600; letter-spacing:-.075em; }
+    .mark span { letter-spacing:0; font-size:.22em; transform:translateY(.05em); }
+    .rule { width:46px; height:1px; margin:30px auto 25px; background:var(--line); }
+    .tagline { margin:0; text-align:center; font-size:.94rem; line-height:1.65; font-weight:400; letter-spacing:.035em; color:#d5d5d1; }
+    .identity { margin:44px 0 31px; text-align:center; }
+    h1 { margin:0 0 9px; font-size:1.32rem; line-height:1.25; font-weight:520; letter-spacing:.005em; }
+    .role { margin:0; color:var(--muted); font-size:.92rem; letter-spacing:.02em; }
+    .actions { display:grid; gap:11px; }
+    .action { min-height:54px; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:0 19px; border:1px solid var(--line); border-radius:4px; color:var(--text); background:transparent; text-decoration:none; font:inherit; font-size:.96rem; cursor:pointer; transition:background .18s ease,border-color .18s ease,transform .18s ease; -webkit-tap-highlight-color:transparent; }
+    .action.primary { background:var(--text); color:#0a0a0a; border-color:var(--text); font-weight:600; }
+    .action:hover { background:var(--hover); border-color:#4a4a47; }
+    .action.primary:hover { background:#dcdcd8; border-color:#dcdcd8; }
+    .action:active { transform:scale(.99); }
+    .action:focus-visible { outline:2px solid var(--text); outline-offset:3px; }
+    .icon { width:19px; height:19px; flex:0 0 auto; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+    footer { margin-top:38px; text-align:center; color:#666662; font-size:.68rem; letter-spacing:.3em; padding-left:.3em; }
+    @media (max-height:700px) { main { padding-top:22px; padding-bottom:18px; } .rule{margin:22px auto 18px}.identity{margin:30px 0 24px}footer{margin-top:25px} }
+    @media (prefers-reduced-motion:reduce) { .action { transition:none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card" aria-label="Tarjeta digital LAYOUTM">
+      <div class="mark" aria-label="LM estrella">LM <span aria-hidden="true">✦</span></div>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="tagline">Carpintería inteligente<br>Detalles que conectan</p>
+      <div class="identity">
+        <h1>Luis Miranda Alhuay</h1>
+        <p class="role">Coordinador de Proyectos</p>
+      </div>
+      <nav class="actions" aria-label="Opciones de contacto">
+        <button class="action primary" type="button" id="saveContact">
+          <span>Guardar contacto</span>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 16v3h14v-3"/></svg>
+        </button>
+        <a class="action" href="https://wa.me/51908819044?text=Hola%20Luis%2C%20vi%20tu%20tarjeta%20digital%20de%20LAYOUTM%20y%20quisiera%20informaci%C3%B3n%20sobre%20un%20proyecto." rel="noopener">
+          <span>WhatsApp</span>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.5 2.3 2.2 4 4.5 4.5"/></svg>
+        </a>
+        <a class="action" href="tel:+51908819044">
+          <span>Llamar</span>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 4 10 8l-2 2c1 2.8 3.2 5 6 6l2-2 4 2.5-.7 3c-.2.8-.9 1.4-1.8 1.4C9.5 20.3 3.7 14.5 3.1 6.5c0-.9.6-1.6 1.4-1.8L7.5 4Z"/></svg>
+        </a>
+        <a class="action" href="mailto:comercial@layoutm.com">
+          <span>Correo</span>
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 7 9 7 9-7"/></svg>
+        </a>
+      </nav>
+      <footer>LAYOUTM</footer>
+    </section>
+  </main>
+  <script>
+    const vCard = `BEGIN:VCARD\r\nVERSION:3.0\r\nN:Miranda Alhuay;Luis;;;\r\nFN:Luis Miranda Alhuay\r\nORG:LAYOUTM\r\nTITLE:Coordinador de Proyectos\r\nTEL;TYPE=CELL:+51908819044\r\nEMAIL;TYPE=WORK:comercial@layoutm.com\r\nNOTE:Carpintería inteligente - Detalles que conectan\r\nEND:VCARD\r\n`;
+    document.getElementById('saveContact').addEventListener('click', () => {
+      const blob = new Blob([vCard], { type:'text/vcard;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Luis-Miranda-LAYOUTM.vcf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+  </script>
+</body>
+</html>
