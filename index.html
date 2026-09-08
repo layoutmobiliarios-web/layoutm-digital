@@ -14,7 +14,7 @@
     body { margin:0; min-height:100svh; background:var(--bg); color:var(--text); font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
     main { min-height:100svh; display:grid; place-items:center; padding:max(28px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left)); }
     .card { width:min(100%,430px); }
-    .brand { width:min(100%,300px); margin:0 auto; }
+    .brand { width:min(100%,280px); margin:0 auto; }
     .mark { display:block; width:100%; height:auto; color:var(--text); }
     .rule { width:100%; height:1px; margin:17px 0 14px; background:#a7a7a2; }
     .tagline { margin:0; padding:0 27px; font-size:.82rem; line-height:1.65; font-weight:400; letter-spacing:.18em; color:#d8d8d4; }
@@ -31,8 +31,8 @@
     .action:focus-visible { outline:2px solid var(--text); outline-offset:3px; }
     .icon { width:19px; height:19px; flex:0 0 auto; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
     footer { margin-top:38px; text-align:center; color:#666662; font-size:.68rem; letter-spacing:.3em; padding-left:.3em; }
-    @media (max-width:360px) { .brand{width:min(100%,280px)} .tagline{padding:0 20px;font-size:.76rem;letter-spacing:.15em} }
-    @media (max-height:700px) { main { padding-top:22px; padding-bottom:18px; } .brand{width:min(100%,260px)} .rule{margin:13px 0 11px}.identity{margin:30px 0 24px}footer{margin-top:25px} }
+    @media (max-width:360px) { .brand{width:min(100%,260px)} .tagline{padding:0 20px;font-size:.76rem;letter-spacing:.15em} }
+    @media (max-height:700px) { main { padding-top:22px; padding-bottom:18px; } .brand{width:min(100%,243px)} .rule{margin:13px 0 11px}.identity{margin:30px 0 24px}footer{margin-top:25px} }
     @media (prefers-reduced-motion:reduce) { .action { transition:none; } }
   </style>
 </head>
@@ -43,7 +43,7 @@
         <svg class="mark" viewBox="0 0 300 88" role="img" aria-label="Logo LM con estrella de cuatro puntas">
           <path d="M20 12V72H76" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="square"/>
           <path d="M98 72V12L146 51L194 12V72" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="miter" stroke-linecap="square"/>
-          <path d="M250 7C250 29 241 40 221 40C241 40 250 51 250 73C250 51 259 40 279 40C259 40 250 29 250 7Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M250 7C250 29 241 40 221 40C241 40 250 51 250 73C250 51 259 40 279 40C259 40 250 29 250 7Z" transform="translate(0 3)" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
         </svg>
         <div class="rule" aria-hidden="true"></div>
         <p class="tagline"><span>Carpintería inteligente</span><span>Detalles que conectan</span></p>
