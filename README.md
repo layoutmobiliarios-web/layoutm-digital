@@ -42,6 +42,8 @@ layoutm-digital/
 │   ├── css/
 │   │   └── styles.css
 │   ├── brand/
+│   │   ├── layoutm-logo-extendido.jpeg
+│   │   ├── layoutm-logo-principal.png
 │   │   └── README.md
 │   └── js/
 │       └── main.js
@@ -54,7 +56,7 @@ layoutm-digital/
 - `index.html`: estructura semántica del HOME, navegación, contenido y metadatos.
 - `assets/css/styles.css`: identidad visual, maquetación responsive, estados de interacción y transición de entrada.
 - `assets/js/main.js`: menú móvil, control del brand reveal y generación dinámica de la vCard corporativa.
-- `assets/brand/README.md`: condiciones para incorporar los activos gráficos oficiales sin reconstruirlos.
+- `assets/brand/`: imágenes oficiales suministradas y documentación para conservarlas sin reconstruirlas.
 - `contact/LAYOUTM.vcf`: copia física de respaldo del contacto corporativo aprobado.
 - `.github/workflows/pages.yml`: flujo automático de publicación en GitHub Pages.
 - `README.md`: documentación operativa del repositorio.
@@ -63,13 +65,9 @@ La arquitectura principal distingue `Proyectos` y `Colecciones`. El HOME explica
 
 ## Identidad oficial y brand reveal
 
-Las versiones principal y extendida del logo LAYOUTM son las referencias visuales oficiales. Los archivos gráficos originales todavía deben incorporarse al repositorio; no deben reconstruirse ni reinterpretarse.
+Las versiones principal y extendida suministradas del logo LAYOUTM son las referencias visuales oficiales. Se conservan dentro de `assets/brand/` sin modificar sus píxeles, proporciones ni composición.
 
-El contenedor y el comportamiento del brand reveal están preparados en `index.html`, `assets/css/styles.css` y `assets/js/main.js`, pero permanecen inactivos mientras `data-brand-logo-src` esté vacío. Al recibir el activo oficial se debe:
-
-1. Guardar el archivo original aprobado dentro de `assets/brand/` sin alterar su composición.
-2. Registrar su ruta en `data-brand-logo-src`.
-3. Verificar la transición, la carga simultánea del HOME y `prefers-reduced-motion` antes de aprobar la publicación.
+El brand reveal utiliza `assets/brand/layoutm-logo-principal.png`. La versión extendida se conserva como referencia y queda disponible para una ubicación futura aprobada.
 
 El reveal dura aproximadamente un segundo y no sustituye ni bloquea la carga real de la página. Con reducción de movimiento activada se omite.
 
@@ -80,7 +78,7 @@ El reveal dura aproximadamente un segundo y no sustituye ni bloquea la carga rea
 - Llamada telefónica.
 - Correo electrónico.
 - Diseño responsive para celular y escritorio.
-- Identidad visual oscura y recurso gráfico preexistente, sin alterar su geometría. Su sustitución por los activos oficiales queda pendiente de recibir los archivos originales.
+- Identidad visual oscura, logo compacto preexistente y activos oficiales, sin alterar su geometría ni composición.
 
 ## Recuperación básica
 
