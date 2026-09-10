@@ -21,6 +21,13 @@
 </head>
 <body>
   <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <!--
+    Brand reveal preparado para el activo oficial. Se mantiene inactivo hasta
+    incorporar el archivo original aprobado en data-brand-logo-src.
+  -->
+  <div class="brand-reveal" data-brand-reveal data-brand-logo-src="" hidden aria-hidden="true">
+    <img class="brand-reveal-logo" alt="" width="520" height="152">
+  </div>
   <header class="site-header" id="inicio">
     <div class="shell header-inner">
       <a class="brand-link" href="#inicio" aria-label="LAYOUTM, ir al inicio">
@@ -34,9 +41,9 @@
         <span class="sr-only">Abrir menú</span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a><a href="#que-hacemos">Servicios</a><a href="#proceso">Proceso</a><a href="#capacidades">Materiales</a><a href="#contacto">Contacto</a>
+        <a href="#proyectos">Proyectos</a><a href="#colecciones">Colecciones</a><a href="#contacto">Contacto</a>
       </nav>
-      <a class="header-cta" href="https://wa.me/51908819044?text=Hola%20Luis%2C%20vi%20tu%20tarjeta%20digital%20de%20LAYOUTM%20y%20quisiera%20informaci%C3%B3n%20sobre%20un%20proyecto." rel="noopener">Solicitar cotización</a>
+      <a class="header-cta" href="https://wa.me/51908819044?text=Hola%20LAYOUTM%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quisiera%20informaci%C3%B3n%20sobre%20un%20proyecto." rel="noopener">Solicitar cotización</a>
     </div>
   </header>
 
@@ -45,11 +52,11 @@
       <div class="shell hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Diseño · Fabricación · Implementación</p>
-          <h1 id="hero-title">Mobiliario que lleva una idea técnica hasta su instalación.</h1>
-          <p class="hero-lead">Diseñamos, fabricamos e implementamos mobiliario y soluciones para espacios comerciales, conectando materiales, componentes y detalle constructivo.</p>
+          <h1 id="hero-title">Diseño, fabricación e implementación de mobiliario para espacios comerciales.</h1>
+          <p class="hero-lead">Desarrollamos soluciones que conectan intención de diseño, ingeniería del detalle, materiales, componentes y ejecución en proyecto.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://wa.me/51908819044?text=Hola%20Luis%2C%20vi%20tu%20tarjeta%20digital%20de%20LAYOUTM%20y%20quisiera%20informaci%C3%B3n%20sobre%20un%20proyecto." rel="noopener">Solicitar cotización<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
-            <a class="button button-secondary" href="#proceso">Conocer el proceso</a>
+            <a class="button button-primary" href="https://wa.me/51908819044?text=Hola%20LAYOUTM%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quisiera%20informaci%C3%B3n%20sobre%20un%20proyecto." rel="noopener">Solicitar cotización<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+            <a class="button button-secondary" href="#proyectos">Proyectos y colecciones</a>
           </div>
           <p class="brand-statement">Carpintería inteligente · Diseño · Innovación · Detalles que conectan.</p>
         </div>
@@ -62,6 +69,29 @@
             <li><span>04</span><strong>Instalar</strong><small>Montaje · ajuste · entrega</small></li>
           </ol>
           <div class="panel-foot"><span>Diseño</span><i aria-hidden="true"></i><span>Ejecución</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section universes-section" aria-labelledby="universes-title">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow">Arquitectura LAYOUTM</p><h2 id="universes-title">Dos universos, una misma capacidad técnica.</h2></div>
+          <p>Diseño, fabricación e implementación aplicados tanto a requerimientos únicos como a familias de mobiliario propias.</p>
+        </div>
+        <div class="universe-grid">
+          <article class="universe-card" id="proyectos">
+            <span class="card-number">01 / A medida</span>
+            <h3>Proyectos</h3>
+            <p>Soluciones desarrolladas a medida para espacios comerciales, mobiliario especial, fabricación e implementación según los requerimientos de cada proyecto.</p>
+            <a href="#que-hacemos">Conocer nuestra capacidad técnica <span aria-hidden="true">↓</span></a>
+          </article>
+          <article class="universe-card" id="colecciones">
+            <span class="card-number">02 / Diseño propio</span>
+            <h3>Colecciones</h3>
+            <p>Diseños propios de mobiliario LAYOUTM concebidos como productos o familias repetibles, con atención a materiales, componentes y detalle constructivo.</p>
+            <a href="#contacto">Consultar sobre colecciones <span aria-hidden="true">↓</span></a>
+          </article>
         </div>
       </div>
     </section>
@@ -81,7 +111,10 @@
       </div>
     </section>
 
-    <!-- Proyectos: arquitectura reservada. Incorporar únicamente con contenido e imágenes reales aprobadas. -->
+    <!--
+      Las futuras vistas de proyectos y colecciones se incorporarán únicamente
+      con contenido e imágenes reales aprobadas. No hay tarjetas ficticias públicas.
+    -->
 
     <section class="section process-section" id="proceso" aria-labelledby="process-title">
       <div class="shell">
@@ -121,18 +154,18 @@
     <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
       <div class="shell contact-layout">
         <div class="contact-copy">
-          <p class="eyebrow">Contacto directo</p><h2 id="contact-title">¿Tienes un proyecto? Conversemos.</h2>
+          <p class="eyebrow">Contacto</p><h2 id="contact-title">¿Tienes un proyecto? Conversemos.</h2>
           <p>Cuéntanos qué necesitas desarrollar y revisemos el alcance de tu mobiliario.</p>
-          <a class="button button-primary" href="https://wa.me/51908819044?text=Hola%20Luis%2C%20vi%20tu%20tarjeta%20digital%20de%20LAYOUTM%20y%20quisiera%20informaci%C3%B3n%20sobre%20un%20proyecto." rel="noopener">Conversar por WhatsApp<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+          <a class="button button-primary" href="https://wa.me/51908819044?text=Hola%20LAYOUTM%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quisiera%20informaci%C3%B3n%20sobre%20un%20proyecto." rel="noopener">Conversar por WhatsApp<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
         </div>
-        <article class="digital-card" aria-label="Tarjeta digital de Luis Miranda Alhuay">
+        <article class="digital-card" aria-label="Contacto corporativo de LAYOUTM">
           <div class="digital-card-head">
-            <div><span>Tarjeta digital</span><h3>Luis Miranda Alhuay</h3><p>Coordinador de Proyectos</p></div>
-            <span class="digital-card-brand">LAYOUTM</span>
+            <div><span>Contacto corporativo</span><h3>LAYOUTM</h3><p>Diseño · fabricación · implementación</p></div>
+            <span class="digital-card-brand" aria-hidden="true">Contacto</span>
           </div>
           <div class="contact-actions">
             <button class="contact-action contact-action-primary" type="button" id="saveContact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 16v3h14v-3"/></svg><span>Guardar contacto</span></button>
-            <a class="contact-action" href="https://wa.me/51908819044?text=Hola%20Luis%2C%20vi%20tu%20tarjeta%20digital%20de%20LAYOUTM%20y%20quisiera%20informaci%C3%B3n%20sobre%20un%20proyecto." rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.5 2.3 2.2 4 4.5 4.5"/></svg><span>WhatsApp</span></a>
+            <a class="contact-action" href="https://wa.me/51908819044?text=Hola%20LAYOUTM%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quisiera%20informaci%C3%B3n%20sobre%20un%20proyecto." rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.5 2.3 2.2 4 4.5 4.5"/></svg><span>WhatsApp</span></a>
             <a class="contact-action" href="tel:+51908819044"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 4 10 8l-2 2c1 2.8 3.2 5 6 6l2-2 4 2.5-.7 3c-.2.8-.9 1.4-1.8 1.4C9.5 20.3 3.7 14.5 3.1 6.5c0-.9.6-1.6 1.4-1.8L7.5 4Z"/></svg><span>Llamar</span></a>
             <a class="contact-action" href="mailto:layout.mobiliarios@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 7 9 7 9-7"/></svg><span>Correo</span></a>
           </div>
@@ -149,7 +182,7 @@
     </div>
   </footer>
   <nav class="mobile-contact-bar" aria-label="Contacto rápido">
-    <a href="https://wa.me/51908819044?text=Hola%20Luis%2C%20vi%20tu%20tarjeta%20digital%20de%20LAYOUTM%20y%20quisiera%20informaci%C3%B3n%20sobre%20un%20proyecto." rel="noopener">WhatsApp</a><a href="#contacto">Tarjeta digital</a>
+    <a href="https://wa.me/51908819044?text=Hola%20LAYOUTM%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quisiera%20informaci%C3%B3n%20sobre%20un%20proyecto." rel="noopener">WhatsApp</a><a href="#contacto">Contacto</a>
   </nav>
   <script src="assets/js/main.js" defer></script>
 </body>

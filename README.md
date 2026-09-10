@@ -1,6 +1,6 @@
 # LAYOUTM Digital
 
-Tarjeta digital de Luis Miranda Alhuay para LAYOUTM, preparada para acceso desde códigos QR y dispositivos NFC.
+HOME corporativo y sistema de contacto digital de LAYOUTM, preparados para acceso web y desde códigos QR o dispositivos NFC.
 
 ## URL pública
 
@@ -41,31 +41,46 @@ layoutm-digital/
 ├── assets/
 │   ├── css/
 │   │   └── styles.css
+│   ├── brand/
+│   │   └── README.md
 │   └── js/
 │       └── main.js
 ├── contact/
-│   └── Luis-Miranda-LAYOUTM.vcf
+│   └── LAYOUTM.vcf
 ├── index.html
 └── README.md
 ```
 
-- `index.html`: estructura semántica del HOME, contenido, logo SVG y metadatos.
-- `assets/css/styles.css`: identidad visual, maquetación responsive y estados de interacción.
-- `assets/js/main.js`: menú móvil y generación dinámica de la vCard.
-- `contact/Luis-Miranda-LAYOUTM.vcf`: copia física de respaldo del contacto aprobado.
+- `index.html`: estructura semántica del HOME, navegación, contenido y metadatos.
+- `assets/css/styles.css`: identidad visual, maquetación responsive, estados de interacción y transición de entrada.
+- `assets/js/main.js`: menú móvil, control del brand reveal y generación dinámica de la vCard corporativa.
+- `assets/brand/README.md`: condiciones para incorporar los activos gráficos oficiales sin reconstruirlos.
+- `contact/LAYOUTM.vcf`: copia física de respaldo del contacto corporativo aprobado.
 - `.github/workflows/pages.yml`: flujo automático de publicación en GitHub Pages.
 - `README.md`: documentación operativa del repositorio.
 
-La sección de proyectos está reservada en la arquitectura, pero no se publica hasta contar con proyectos e imágenes reales aprobadas.
+La arquitectura principal distingue `Proyectos` y `Colecciones`. El HOME explica ambos universos sin inventar fichas, proyectos, productos o imágenes. Sus futuras vistas se publicarán únicamente con contenido real aprobado.
+
+## Identidad oficial y brand reveal
+
+Las versiones principal y extendida del logo LAYOUTM son las referencias visuales oficiales. Los archivos gráficos originales todavía deben incorporarse al repositorio; no deben reconstruirse ni reinterpretarse.
+
+El contenedor y el comportamiento del brand reveal están preparados en `index.html`, `assets/css/styles.css` y `assets/js/main.js`, pero permanecen inactivos mientras `data-brand-logo-src` esté vacío. Al recibir el activo oficial se debe:
+
+1. Guardar el archivo original aprobado dentro de `assets/brand/` sin alterar su composición.
+2. Registrar su ruta en `data-brand-logo-src`.
+3. Verificar la transición, la carga simultánea del HOME y `prefers-reduced-motion` antes de aprobar la publicación.
+
+El reveal dura aproximadamente un segundo y no sustituye ni bloquea la carga real de la página. Con reducción de movimiento activada se omite.
 
 ## Funciones protegidas
 
-- Guardar contacto mediante vCard generada en el navegador.
+- Guardar el contacto corporativo LAYOUTM mediante vCard generada en el navegador.
 - Acceso a WhatsApp con mensaje predefinido.
 - Llamada telefónica.
 - Correo electrónico.
 - Diseño responsive para celular y escritorio.
-- Identidad visual y logo LM+ actuales.
+- Identidad visual oscura y recurso gráfico preexistente, sin alterar su geometría. Su sustitución por los activos oficiales queda pendiente de recibir los archivos originales.
 
 ## Recuperación básica
 
