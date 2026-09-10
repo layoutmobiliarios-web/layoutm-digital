@@ -44,6 +44,7 @@ layoutm-digital/
 │   ├── brand/
 │   │   ├── layoutm-logo-extendido.jpeg
 │   │   ├── layoutm-logo-principal.png
+│   │   ├── layoutm-logo-web.png
 │   │   └── README.md
 │   └── js/
 │       └── main.js
@@ -67,7 +68,7 @@ La arquitectura principal distingue `Proyectos` y `Colecciones`. El HOME explica
 
 Las versiones principal y extendida suministradas del logo LAYOUTM son las referencias visuales oficiales. Se conservan dentro de `assets/brand/` sin modificar sus píxeles, proporciones ni composición.
 
-El brand reveal utiliza `assets/brand/layoutm-logo-principal.png`. La versión extendida se conserva como referencia y queda disponible para una ubicación futura aprobada.
+El brand reveal y el encabezado utilizan `assets/brand/layoutm-logo-web.png`, un recorte lossless de la versión principal que elimina únicamente el exceso de lienzo negro. La versión extendida se conserva como referencia y queda disponible para una ubicación futura aprobada.
 
 El reveal dura aproximadamente un segundo y no sustituye ni bloquea la carga real de la página. Con reducción de movimiento activada se omite.
 
