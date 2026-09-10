@@ -38,16 +38,25 @@ layoutm-digital/
 ├── .github/
 │   └── workflows/
 │       └── pages.yml
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       └── main.js
 ├── contact/
 │   └── Luis-Miranda-LAYOUTM.vcf
 ├── index.html
 └── README.md
 ```
 
-- `index.html`: estructura, diseño, estilos, logo SVG, botones y generación dinámica de la vCard.
+- `index.html`: estructura semántica del HOME, contenido, logo SVG y metadatos.
+- `assets/css/styles.css`: identidad visual, maquetación responsive y estados de interacción.
+- `assets/js/main.js`: menú móvil y generación dinámica de la vCard.
 - `contact/Luis-Miranda-LAYOUTM.vcf`: copia física de respaldo del contacto aprobado.
 - `.github/workflows/pages.yml`: flujo automático de publicación en GitHub Pages.
 - `README.md`: documentación operativa del repositorio.
+
+La sección de proyectos está reservada en la arquitectura, pero no se publica hasta contar con proyectos e imágenes reales aprobadas.
 
 ## Funciones protegidas
 
