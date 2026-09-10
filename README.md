@@ -70,6 +70,10 @@ Las versiones principal y extendida suministradas del logo LAYOUTM son las refer
 
 El brand reveal y el encabezado utilizan `assets/brand/layoutm-logo-web.png`, un recorte lossless de la versión principal que elimina únicamente el exceso de lienzo negro. La versión extendida se conserva como referencia y queda disponible para una ubicación futura aprobada.
 
+Para evitar diferencias visibles entre el negro del archivo raster y el fondo de la interfaz, el logo se integra mediante composición CSS `lighten`; el activo oficial y su geometría permanecen intactos.
+
+El HOME deja preparado el componente inerte `#hero-image-template` para incorporar una futura fotografía oficial. Cuando exista un activo aprobado, la clase `.hero-grid--media` asignará mayor superficie a la imagen y retirará el panel técnico del Hero. Hasta entonces no se muestra ningún placeholder ni proyecto ficticio.
+
 El reveal dura aproximadamente un segundo y no sustituye ni bloquea la carga real de la página. Con reducción de movimiento activada se omite.
 
 ## Funciones protegidas
