@@ -41,17 +41,3 @@ siteNav.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeMenu();
 });
-
-const vCard = `BEGIN:VCARD\r\nVERSION:3.0\r\nN:;LAYOUTM;;;\r\nFN:LAYOUTM\r\nORG:LAYOUTM\r\nTEL;TYPE=CELL,WORK:+51908819044\r\nEMAIL;TYPE=WORK:layout.mobiliarios@gmail.com\r\nNOTE:Carpintería inteligente - Detalles que conectan\r\nEND:VCARD\r\n`;
-
-document.getElementById('saveContact').addEventListener('click', () => {
-  const blob = new Blob([vCard], { type: 'text/vcard;charset=utf-8' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = 'LAYOUTM.vcf';
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-});

@@ -22,7 +22,7 @@ Procedimiento básico de publicación:
 2. Confirmar que no se incluyan contraseñas, tokens, API keys ni información confidencial.
 3. Integrar los cambios aprobados en `main`.
 4. Revisar que el flujo **Deploy GitHub Pages** finalice correctamente.
-5. Verificar la URL pública, los botones y la descarga del contacto.
+5. Verificar la URL pública y los accesos a WhatsApp.
 
 ## Línea base aprobada
 
@@ -50,18 +50,15 @@ layoutm-digital/
 │   │   └── layoutm-hero-conceptual.webp
 │   └── js/
 │       └── main.js
-├── contact/
-│   └── LAYOUTM.vcf
 ├── index.html
 └── README.md
 ```
 
 - `index.html`: estructura semántica del HOME, navegación, contenido y metadatos.
 - `assets/css/styles.css`: identidad visual, maquetación responsive, estados de interacción y transición de entrada.
-- `assets/js/main.js`: menú móvil, control del brand reveal y generación dinámica de la vCard corporativa.
+- `assets/js/main.js`: menú móvil y control del brand reveal.
 - `assets/brand/`: imágenes oficiales suministradas y documentación para conservarlas sin reconstruirlas.
 - `assets/images/layoutm-hero-conceptual.webp`: visual conceptual del Hero; no representa un proyecto ejecutado por LAYOUTM.
-- `contact/LAYOUTM.vcf`: copia física de respaldo del contacto corporativo aprobado.
 - `.github/workflows/pages.yml`: flujo automático de publicación en GitHub Pages.
 - `README.md`: documentación operativa del repositorio.
 
@@ -81,10 +78,7 @@ El reveal dura aproximadamente un segundo y no sustituye ni bloquea la carga rea
 
 ## Funciones protegidas
 
-- Guardar el contacto corporativo LAYOUTM mediante vCard generada en el navegador.
 - Acceso a WhatsApp con mensaje predefinido.
-- Llamada telefónica.
-- Correo electrónico.
 - Diseño responsive para celular y escritorio.
 - Identidad visual oscura, logo compacto preexistente y activos oficiales, sin alterar su geometría ni composición.
 
