@@ -46,6 +46,8 @@ layoutm-digital/
 │   │   ├── layoutm-logo-principal.png
 │   │   ├── layoutm-logo-web.png
 │   │   └── README.md
+│   ├── images/
+│   │   └── layoutm-hero-conceptual.webp
 │   └── js/
 │       └── main.js
 ├── contact/
@@ -58,11 +60,12 @@ layoutm-digital/
 - `assets/css/styles.css`: identidad visual, maquetación responsive, estados de interacción y transición de entrada.
 - `assets/js/main.js`: menú móvil, control del brand reveal y generación dinámica de la vCard corporativa.
 - `assets/brand/`: imágenes oficiales suministradas y documentación para conservarlas sin reconstruirlas.
+- `assets/images/layoutm-hero-conceptual.webp`: visual conceptual del Hero; no representa un proyecto ejecutado por LAYOUTM.
 - `contact/LAYOUTM.vcf`: copia física de respaldo del contacto corporativo aprobado.
 - `.github/workflows/pages.yml`: flujo automático de publicación en GitHub Pages.
 - `README.md`: documentación operativa del repositorio.
 
-La arquitectura principal distingue `Proyectos` y `Colecciones`. El HOME explica ambos universos sin inventar fichas, proyectos, productos o imágenes. Sus futuras vistas se publicarán únicamente con contenido real aprobado.
+La arquitectura principal distingue `Proyectos` y `Colecciones`. El HOME prioriza una experiencia visual y emocional, mantiene únicamente información breve de marca y no inventa fichas, clientes, proyectos ni productos. Sus futuras vistas se publicarán únicamente con contenido real aprobado.
 
 ## Identidad oficial y brand reveal
 
@@ -72,7 +75,7 @@ El brand reveal y el encabezado utilizan `assets/brand/layoutm-logo-web.png`, un
 
 Para evitar diferencias visibles entre el negro del archivo raster y el fondo de la interfaz, el logo se integra mediante composición CSS `lighten`; el activo oficial y su geometría permanecen intactos.
 
-El HOME deja preparado el componente inerte `#hero-image-template` para incorporar una futura fotografía oficial. Cuando exista un activo aprobado, la clase `.hero-grid--media` asignará a la imagen la superficie dominante del Hero. Hasta entonces no se muestra ningún placeholder ni proyecto ficticio.
+El Hero utiliza una imagen conceptual original y la identifica expresamente como tal para no atribuirla a un proyecto real de LAYOUTM. Cuando exista una fotografía oficial aprobada podrá reemplazarse conservando la composición visual dominante.
 
 El reveal dura aproximadamente un segundo y no sustituye ni bloquea la carga real de la página. Con reducción de movimiento activada se omite.
 
