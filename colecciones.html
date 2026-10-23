@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Colecciones JOMO by LAYOUTM: mobiliario modular de diseño propio. Catálogo piloto en preparación.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Colecciones | JOMO by LAYOUTM — Vista piloto</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    .catalog { --gold: #d8b998; color:#f5f5f2; background:#090909; min-height:100svh; }
+    .catalog *, .catalog *::before, .catalog *::after { box-sizing:border-box; }
+    .catalog .shell { width:min(1180px, calc(100% - 40px)); margin-inline:auto; }
+    .catalog-header { border-bottom:1px solid #333; }
+    .catalog-header .shell { min-height:74px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .catalog-logo { display:block; width:170px; height:auto; }
+    .catalog-nav { display:flex; gap:24px; align-items:center; }
+    .catalog-nav a, .catalog a { color:inherit; }
+    .catalog-nav a { text-decoration:none; font-size:.9rem; }
+    .catalog-nav a[aria-current="page"] { border-bottom:1px solid #fff; padding-bottom:6px; }
+    .catalog-home { border:1px solid #777; padding:10px 14px; }
+    .catalog-hero { padding:72px 0 66px; border-bottom:1px solid #292929; background:radial-gradient(ellipse at 85% 15%, #24201d 0, #11100f 40%, #090909 74%); }
+    .catalog-kicker { font-size:.78rem; letter-spacing:.24em; color:var(--gold); font-weight:650; }
+    .catalog-hero h1 { margin:14px 0 20px; font-size:clamp(3.4rem, 7vw, 6.6rem); line-height:1; letter-spacing:-.05em; }
+    .catalog-hero p { max-width:650px; color:#c8c3bd; font-size:clamp(1rem, 1.7vw, 1.25rem); }
+    .catalog-features { display:flex; flex-wrap:wrap; gap:18px 26px; margin-top:36px; font-size:.85rem; color:#d3cbc2; }
+    .catalog-features span::before { content:"◇"; color:var(--gold); margin-right:9px; }
+    .catalog-notice { border:1px solid #5d5147; background:#1a1715; padding:15px 18px; margin-top:30px; max-width:780px; font-size:.88rem; color:#e2d6cb; }
+    .catalog-content { padding:42px 0 90px; }
+    .catalog-toolbar { display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; margin-bottom:30px; }
+    .catalog-pills { display:flex; flex-wrap:wrap; gap:9px; }
+    .catalog-pill { font:inherit; cursor:pointer; background:#111; color:#f5f5f2; border:1px solid #4d4d4d; padding:10px 17px; min-height:44px; }
+    .catalog-pill[aria-pressed="true"] { background:#f5f5f2; color:#090909; border-color:#f5f5f2; }
+    .catalog-search { min-width:min(270px, 100%); min-height:44px; background:#111; color:#fff; border:1px solid #545454; padding:10px 14px; font:inherit; }
+    .catalog-count { margin:0 0 19px; color:#bcb7b0; font-size:.9rem; }
+    .catalog-products { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+    .catalog-product { min-width:0; border:1px solid #3c3733; background:#11100f; }
+    .catalog-image { display:grid; place-items:center; min-height:340px; padding:30px; background:linear-gradient(135deg, #3b3028, #201b18 58%, #100f0e); }
+    .catalog-image svg { width:min(100%,250px); max-height:320px; }
+    .catalog-info { padding:22px; }
+    .catalog-tag { color:var(--gold); font-size:.7rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; }
+    .catalog-info h2 { font-size:1.65rem; line-height:1.1; margin:11px 0 10px; }
+    .catalog-info p { font-size:.94rem; color:#c9c4be; line-height:1.5; margin:0 0 14px; }
+    .catalog-price { color:#ead8c8; font-size:1.1rem; font-weight:700; padding:10px 0 18px; }
+    .catalog-info details { border-top:1px solid #49403a; padding-top:16px; }
+    .catalog-info summary { cursor:pointer; font-size:.92rem; font-weight:650; padding:4px 0; }
+    .catalog-info details ul { color:#d8d0c8; font-size:.9rem; padding-left:19px; line-height:1.75; }
+    .catalog-future { padding:34px 28px; min-height:340px; border:1px dashed #514943; display:flex; flex-direction:column; justify-content:center; gap:10px; background:#141312; }
+    .catalog-future h2 { margin:0; font-size:1.45rem; }
+    .catalog-future p { color:#c3bdb7; font-size:.96rem; margin:0; }
+    .catalog-empty { padding:30px; border:1px solid #484848; color:#dedbd6; }
+    .catalog-footer { border-top:1px solid #303030; padding:30px 0 56px; font-size:.85rem; color:#c3bdb7; }
+    .catalog-footer .shell { display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; }
+    @media(max-width:900px) { .catalog-products { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:620px) {
+      .catalog .shell { width:calc(100% - 28px); }
+      .catalog-header .shell { min-height:68px; }
+      .catalog-logo { width:136px; }
+      .catalog-nav { gap:13px; }
+      .catalog-nav a { font-size:.78rem; }
+      .catalog-nav .catalog-home { display:none; }
+      .catalog-hero { padding:54px 0 46px; }
+      .catalog-products { grid-template-columns:minmax(0,1fr); }
+      .catalog-toolbar { display:block; }
+      .catalog-search { width:100%; margin-top:18px; }
+      .catalog-image { min-height:290px; }
+    }
+    @media(prefers-reduced-motion:reduce) { .catalog * { scroll-behavior:auto !important; } }
+  </style>
+</head>
+<body class="catalog">
+  <a class="skip-link" href="#catalogo">Ir al catálogo</a>
+  <header class="catalog-header">
+    <div class="shell">
+      <a href="index.html" aria-label="Volver al inicio de LAYOUTM"><img class="catalog-logo" src="assets/brand/layoutm-logo-web.png" width="1188" height="186" alt="LAYOUTM"></a>
+      <nav class="catalog-nav" aria-label="Menú de colecciones">
+        <a href="index.html#proyectos">Proyectos</a>
+        <a href="colecciones.html" aria-current="page">Colecciones</a>
+        <a class="catalog-home" href="index.html">Volver al inicio</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="catalog-hero">
+      <div class="shell">
+        <span class="catalog-kicker">JOMO BY LAYOUTM · CATÁLOGO PILOTO</span>
+        <h1>Colecciones</h1>
+        <p>Diseños propios y modulares para dormitorios, salas y oficinas. Muebles versátiles para crear espacios con identidad.</p>
+        <div class="catalog-features" aria-label="Características del concepto">
+          <span>Diseño propio</span><span>Modular y versátil</span><span>Medidas definidas</span>
+        </div>
+        <div class="catalog-notice" role="note"><strong>Vista de evaluación.</strong> Los productos mostrados son referencias de diseño. Precios, disponibilidad y condiciones comerciales se definirán después del análisis de costos. Aún no se reciben pedidos en esta página.</div>
+      </div>
+    </section>
+    <section class="catalog-content" id="catalogo" aria-labelledby="catalog-title">
+      <div class="shell">
+        <div class="catalog-toolbar">
+          <div class="catalog-pills" role="group" aria-label="Filtrar por ambiente">
+            <button class="catalog-pill" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+            <button class="catalog-pill" type="button" data-filter="dormitorio" aria-pressed="false">Dormitorio</button>
+            <button class="catalog-pill" type="button" data-filter="oficina" aria-pressed="false">Oficina</button>
+            <button class="catalog-pill" type="button" data-filter="sala" aria-pressed="false">Sala</button>
+          </div>
+          <label><span class="sr-only">Buscar muebles</span><input class="catalog-search" id="catalog-search" type="search" placeholder="Buscar muebles..." autocomplete="off"></label>
+        </div>
+        <p class="catalog-count" id="catalog-count" aria-live="polite">1 referencia disponible para revisión</p>
+        <div class="catalog-products" id="catalog-products">
+          <article class="catalog-product" data-category="dormitorio" data-name="espejo organizador jomo giratorio">
+            <div class="catalog-image" role="img" aria-label="Ilustración esquemática conceptual del espejo organizador. No es una fotografía ni un plano de fabricación.">
+              <svg viewBox="0 0 280 350" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="wood" x2="1" y2="0"><stop stop-color="#a17754"/><stop offset="1" stop-color="#62432f"/></linearGradient><linearGradient id="mirror" x2=".8" y2="1"><stop stop-color="#e7e3da"/><stop offset=".55" stop-color="#b5b6b3"/><stop offset="1" stop-color="#5c676c"/></linearGradient></defs>
+                <ellipse cx="143" cy="334" rx="83" ry="11" fill="#0c0a09" opacity=".55"/>
+                <path d="M97 42 Q97 14 140 14 Q183 14 183 42 V298 Q183 321 140 321 Q97 321 97 298Z" fill="url(#wood)" stroke="#ba9471" stroke-width="6"/>
+                <path d="M111 42 Q111 28 140 28 Q169 28 169 42 V277 Q169 297 140 297 Q111 297 111 277Z" fill="url(#mirror)" stroke="#ddd4c9" stroke-width="3"/>
+                <path d="M119 55 L154 37" stroke="#fff" stroke-opacity=".47" stroke-width="5"/>
+                <path d="M88 317 H192 V325 H88Z" fill="#a37c5c"/>
+                <path d="M108 325 H174 L195 337 H86Z" fill="#62432f"/>
+              </svg>
+            </div>
+            <div class="catalog-info">
+              <span class="catalog-tag">JOMO · Dormitorio</span>
+              <h2>Espejo Organizador</h2>
+              <p>Concepto de espejo de cuerpo entero con almacenamiento integrado y base giratoria.</p>
+              <div class="catalog-price">Precio: en evaluación</div>
+              <details>
+                <summary>Ver ficha preliminar</summary>
+                <ul>
+                  <li>Altura de referencia: 1.55 m</li>
+                  <li>Espejo de referencia: Ø 50 cm</li>
+                  <li>Profundidad referencial: 20 cm</li>
+                  <li>Estructura prevista: melamina de 18 mm</li>
+                  <li>Base giratoria 360°</li>
+                  <li>Acabados y medidas sujetos a validación final</li>
+                </ul>
+                <p>Ilustración conceptual. No representa el detalle técnico definitivo ni constituye una oferta de venta.</p>
+              </details>
+            </div>
+          </article>
+          <aside class="catalog-future" data-category="todos">
+            <span class="catalog-tag">Próximamente</span>
+            <h2>Más colecciones JOMO</h2>
+            <p>Aquí incorporaremos dormitorios, oficinas, salas y kits modulares, únicamente con fichas y precios aprobados.</p>
+          </aside>
+        </div>
+        <p class="catalog-empty" id="catalog-empty" hidden>No hay referencias en esta categoría por el momento. Prueba otra búsqueda.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="catalog-footer"><div class="shell"><span>JOMO by LAYOUTM · Mobiliario de diseño propio</span><a href="index.html">Volver a LAYOUTM</a></div></footer>
+  <script>
+    (() => {
+      const buttons = Array.from(document.querySelectorAll('[data-filter]'));
+      const search = document.getElementById('catalog-search');
+      const product = document.querySelector('.catalog-product');
+      const coming = document.querySelector('.catalog-future');
+      const count = document.getElementById('catalog-count');
+      const empty = document.getElementById('catalog-empty');
+      let current = 'todos';
+      function render() {
+        const term = search.value.trim().toLocaleLowerCase('es');
+        const matched = (current === 'todos' || current === product.dataset.category) && product.dataset.name.includes(term);
+        product.hidden = !matched; product.style.display = matched ? '' : 'none';
+        const showComing = current === 'todos' && !term;
+        coming.hidden = !showComing; coming.style.display = showComing ? '' : 'none';
+        empty.hidden = matched || showComing;
+        count.textContent = matched ? '1 referencia disponible para revisión' : '0 productos disponibles en esta selección';
+      }
+      buttons.forEach(button => button.addEventListener('click', () => {
+        current = button.dataset.filter;
+        buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        render();
+      }));
+      search.addEventListener('input', render);
+    })();
+  </script>
+</body>
+</html>
