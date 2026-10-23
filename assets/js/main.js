@@ -28,6 +28,11 @@ const closeMenu = () => {
   document.body.classList.remove('menu-open');
 };
 
+const mobileMenu = window.matchMedia('(max-width: 960px)');
+mobileMenu.addEventListener('change', (event) => {
+  if (!event.matches) closeMenu();
+});
+
 menuButton.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!isOpen));
