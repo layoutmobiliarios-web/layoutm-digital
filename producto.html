@@ -52,9 +52,9 @@
     <p class="intro" id="description">Espejo de cuerpo entero con repisas de almacenamiento integrado y base giratoria.</p>
     <p class="price" id="price">Precio referencial: S/ 800–950</p>
     <p class="small">Precio sujeto a evaluación de costos y acabado seleccionado.</p>
-    <fieldset class="colors"><legend>Acabados disponibles para evaluación</legend><div id="swatches" class="swatches" role="group" aria-label="Seleccionar color"></div><p id="color-note" class="small" aria-live="polite">Selecciona un color para ver su información.</p></fieldset>
+    <fieldset class="colors"><legend>Acabados del producto</legend><div id="swatches" class="swatches" role="group" aria-label="Seleccionar color"></div><p id="color-note" class="small" aria-live="polite">Selecciona un acabado para ver su fotografía.</p></fieldset>
     <div class="specs"><h2>Características</h2><ul id="specs"></ul></div>
-    <p class="note">Catálogo informativo. Los acabados y precios deben confirmarse antes de comercializar. Por ahora no se realizan pedidos, pagos ni solicitudes por WhatsApp desde esta página.</p>
+    <p class="note">Los renders de acabados son ilustrativos: el color puede variar según pantalla y luz. La muestra física del tablero define la tonalidad final. Precios sujetos a confirmación. Por ahora no se realizan pedidos, pagos ni solicitudes por WhatsApp desde esta página.</p>
   </div>
 </section>
 </main>
@@ -77,7 +77,7 @@
    $('photo-note').textContent=entry.caption;
  }
  data.images.forEach((entry,i)=>{const b=document.createElement('button');b.type='button';b.className='thumb';b.setAttribute('aria-label','Ver '+entry.caption);b.setAttribute('aria-pressed',String(i===0));const pic=document.createElement('img');pic.src=entry.src;pic.alt='';pic.loading='lazy';const span=document.createElement('span');span.textContent=entry.label;b.append(pic,span);b.addEventListener('click',()=>view(i));thumbs.appendChild(b)});
- const holder=$('swatches');data.colors.forEach((c,i)=>{const b=document.createElement('button');b.type='button';b.className='swatch';b.setAttribute('aria-pressed',String(i===0));const dot=document.createElement('span');dot.className='dot';dot.style.background=c.hex;dot.setAttribute('aria-hidden','true');b.append(dot,document.createTextNode(c.name));holder.appendChild(b);b.addEventListener('click',()=>{[...holder.children].forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('color-note').textContent=c.description})});
+ const holder=$('swatches');data.colors.forEach((c,i)=>{const b=document.createElement('button');b.type='button';b.className='swatch';b.setAttribute('aria-pressed',String(i===0));const dot=document.createElement('span');dot.className='dot';dot.style.background=c.hex;dot.setAttribute('aria-hidden','true');b.append(dot,document.createTextNode(c.name));holder.appendChild(b);b.addEventListener('click',()=>{[...holder.children].forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('color-note').textContent=c.description;if(Number.isInteger(c.imageIndex)&&data.images[c.imageIndex])view(c.imageIndex)})});
  $('color-note').textContent=data.colors[0].description;
  view(0);
 })();
