@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Descubre imágenes, acabados y medidas de los muebles JOMO.">
+<title>Detalle de producto | JOMO</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#090909;color:#f5f5f2;font-family:Arial,sans-serif}
+  a{color:inherit}.shell{width:min(1120px,calc(100% - 34px));margin:auto}
+  .top{border-bottom:1px solid #303030;padding:22px 0}.top .shell{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .top img{width:160px;height:auto;display:block}.back{font-size:.88rem;text-decoration:none;border:1px solid #666;padding:12px 16px}
+  .crumb{color:#beb6af;font-size:.86rem;padding-top:28px}.crumb a{text-decoration:underline}
+  .layout{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(0,1fr);gap:46px;padding:32px 0 70px}
+  .preview{margin:0;background:#211c19;display:flex;align-items:center;justify-content:center;min-height:480px;border:1px solid #38312c}
+  .preview img{width:100%;max-height:630px;object-fit:contain;display:block}
+  .thumbs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
+  .thumb{border:2px solid #52453d;background:#171411;padding:5px;cursor:pointer;color:inherit;font:inherit;text-align:center}
+  .thumb[aria-pressed="true"]{border-color:#e0c2a3}.thumb img{width:100%;height:110px;object-fit:contain;display:block}
+  .thumb span{display:block;padding-top:7px;font-size:.77rem}
+  .tag{font-size:.75rem;color:#d9b897;text-transform:uppercase;letter-spacing:.16em}
+  h1{font-size:clamp(2rem,4vw,3rem);line-height:1.08;letter-spacing:-.035em;margin:18px 0}
+  .intro{color:#ccc5bd;line-height:1.7}.price{font-size:1.45rem;color:#e9c6a1;font-weight:700;margin:26px 0 3px}
+  .small{font-size:.86rem;color:#b9b1aa;line-height:1.5}
+  .colors{border:0;border-top:1px solid #403832;margin:30px 0 0;padding:20px 0 0}
+  legend{font-weight:700;padding:0 0 12px} .swatches{display:flex;flex-wrap:wrap;gap:10px}
+  .swatch{display:flex;gap:8px;align-items:center;background:#151311;color:#fff;border:1px solid #61564d;padding:10px 12px;cursor:pointer;font:inherit}
+  .swatch[aria-pressed="true"]{border-color:#e6c4a3;outline:1px solid #e6c4a3}
+  .dot{width:18px;height:18px;border-radius:50%;border:1px solid #8d8985}
+  .specs{border-top:1px solid #403832;margin-top:25px;padding-top:18px;line-height:1.85;color:#dad3cc}
+  .specs h2{font-size:1.2rem;color:#fff}.specs ul{padding-left:20px}
+  .note{background:#191512;border:1px solid #55463c;padding:15px;margin-top:24px;color:#d4c7bb;font-size:.88rem;line-height:1.5}
+  .footer{border-top:1px solid #302d29;color:#bab0a8;padding:24px 0 40px;font-size:.85rem}
+  @media(max-width:780px){.layout{grid-template-columns:1fr;gap:30px}.preview{min-height:300px}.thumb img{height:85px}.top img{width:135px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="shell"><a href="index.html" aria-label="Inicio LAYOUTM"><img src="assets/brand/layoutm-logo-web.png" width="1188" height="186" alt="LAYOUTM"></a><a class="back" href="colecciones.html">← Volver a Colecciones</a></div></header>
+<main class="shell">
+<nav class="crumb" aria-label="Ruta de navegación"><a href="colecciones.html">Colecciones</a> / <span id="crumb">Producto JOMO</span></nav>
+<section id="product" class="layout" aria-label="Ficha de producto">
+  <div>
+    <figure class="preview"><img id="main-photo" src="assets/jomo/espejo-modelo.jpg" alt="Espejo Organizador JOMO 360 grados, vista frontal con modelo" width="471" height="721"></figure>
+    <div class="thumbs" id="thumbs" role="group" aria-label="Galería de fotografías del producto"></div>
+    <p id="photo-note" class="small" aria-live="polite">Vista principal.</p>
+  </div>
+  <div>
+    <div class="tag" id="category">JOMO · Dormitorio</div>
+    <h1 id="name">Espejo Organizador 360°</h1>
+    <p class="intro" id="description">Espejo de cuerpo entero con repisas de almacenamiento integrado y base giratoria.</p>
+    <p class="price" id="price">Precio referencial: S/ 800–950</p>
+    <p class="small">Precio sujeto a evaluación de costos y acabado seleccionado.</p>
+    <fieldset class="colors"><legend>Acabados disponibles para evaluación</legend><div id="swatches" class="swatches" role="group" aria-label="Seleccionar color"></div><p id="color-note" class="small" aria-live="polite">Selecciona un color para ver su información.</p></fieldset>
+    <div class="specs"><h2>Características</h2><ul id="specs"></ul></div>
+    <p class="note">Catálogo informativo. Los acabados y precios deben confirmarse antes de comercializar. Por ahora no se realizan pedidos, pagos ni solicitudes por WhatsApp desde esta página.</p>
+  </div>
+</section>
+</main>
+<footer class="footer"><div class="shell">JOMO · Colecciones de diseño propio · Fabricación LAYOUTM</div></footer>
+<script src="assets/js/jomo-products.js"></script>
+<script>
+(function(){
+ const id=new URLSearchParams(location.search).get('id')||'espejo-organizador-360';
+ const data=window.JOMO_PRODUCTS && window.JOMO_PRODUCTS[id];
+ if(!data){document.getElementById('product').innerHTML='<div><h1>Producto no encontrado</h1><p><a href="colecciones.html">Volver al catálogo</a></p></div>';return}
+ const $=id=>document.getElementById(id);
+ document.title=data.name+' | Colecciones JOMO';
+ $('crumb').textContent=data.name;$('category').textContent='JOMO · '+data.category;$('name').textContent=data.name;
+ $('description').textContent=data.description;$('price').textContent=data.price;
+ for(const line of data.specs){const li=document.createElement('li');li.textContent=line;$('specs').appendChild(li)}
+ const img=$('main-photo'),thumbs=$('thumbs');
+ function view(index){
+   const entry=data.images[index];img.src=entry.src;img.alt=entry.alt;
+   [...thumbs.children].forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));
+   $('photo-note').textContent=entry.caption;
+ }
+ data.images.forEach((entry,i)=>{const b=document.createElement('button');b.type='button';b.className='thumb';b.setAttribute('aria-label','Ver '+entry.caption);b.setAttribute('aria-pressed',String(i===0));const pic=document.createElement('img');pic.src=entry.src;pic.alt='';pic.loading='lazy';const span=document.createElement('span');span.textContent=entry.label;b.append(pic,span);b.addEventListener('click',()=>view(i));thumbs.appendChild(b)});
+ const holder=$('swatches');data.colors.forEach((c,i)=>{const b=document.createElement('button');b.type='button';b.className='swatch';b.setAttribute('aria-pressed',String(i===0));const dot=document.createElement('span');dot.className='dot';dot.style.background=c.hex;dot.setAttribute('aria-hidden','true');b.append(dot,document.createTextNode(c.name));holder.appendChild(b);b.addEventListener('click',()=>{[...holder.children].forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('color-note').textContent=c.description})});
+ $('color-note').textContent=data.colors[0].description;
+ view(0);
+})();
+</script>
+</body></html>

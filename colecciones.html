@@ -49,6 +49,8 @@
     .catalog-info h2 { font-size:1.65rem; line-height:1.1; margin:11px 0 10px; }
     .catalog-info p { font-size:.94rem; color:#c9c4be; line-height:1.5; margin:0 0 14px; }
     .catalog-price { color:#ead8c8; font-size:1.1rem; font-weight:700; padding:10px 0 18px; }
+    .catalog-view {display:inline-block;border:1px solid #c6a783;padding:13px 18px;text-decoration:none;font-size:.9rem;font-weight:700;min-height:44px;}
+    .catalog-view:hover,.catalog-view:focus-visible {background:#e6c9a7;color:#090909;}
     .catalog-info details { border-top:1px solid #49403a; padding-top:16px; }
     .catalog-info summary { cursor:pointer; font-size:.92rem; font-weight:650; padding:4px 0; }
     .catalog-info details ul { color:#d8d0c8; font-size:.9rem; padding-left:19px; line-height:1.75; }
@@ -118,29 +120,18 @@
         <div class="catalog-products" id="catalog-products">
           <article class="catalog-product" data-category="dormitorio" data-name="espejo organizador jomo giratorio">
             <div class="catalog-image">
+              <a href="producto.html?id=espejo-organizador-360" aria-label="Abrir ficha Espejo Organizador 360 grados" style="display:block">
               <figure class="catalog-photo">
                 <img src="assets/jomo/espejo-modelo.jpg" width="471" height="721" alt="Espejo Organizador JOMO 360° completo junto a una modelo frente al espejo" loading="eager" decoding="async">
               </figure>
+              </a>
             </div>
             <div class="catalog-info">
               <span class="catalog-tag">JOMO · Dormitorio</span>
               <h2>Espejo Organizador 360°</h2>
               <p>Espejo de cuerpo entero con almacenamiento integrado, repisas y base giratoria de 360°. Ideal para optimizar dormitorios.</p>
               <div class="catalog-price">Precio referencial: S/ 800–950 <small>(sujeto a evaluación de costos)</small></div>
-              <details>
-                <summary>Ver detalle y más fotografías</summary>
-                <img class="catalog-detail-photo" src="assets/jomo/espejo-organizador-360.jpg" width="1024" height="1536" alt="Vista posterior del Espejo Organizador JOMO con repisas" loading="lazy">
-                <p class="catalog-detail-photo-caption">Vista del organizador y almacenamiento interior.</p>
-                <ul>
-                  <li>Altura de referencia: 1.55 m</li>
-                  <li>Base giratoria: Ø 50 cm</li>
-                  <li>Profundidad referencial: 20 cm</li>
-                  <li>Estructura prevista: melamina de 18 mm</li>
-                  <li>Base giratoria 360°</li>
-                  <li>Acabados y medidas sujetos a validación final</li>
-                </ul>
-                <p>Imágenes referenciales. Acabados y especificaciones sujetos a confirmación antes de la venta.</p>
-              </details>
+              <a class="catalog-view" href="producto.html?id=espejo-organizador-360" aria-label="Ver detalle y fotografías del Espejo Organizador 360 grados">Ver producto y fotografías →</a>
             </div>
           </article>
           <aside class="catalog-future" data-category="todos">
